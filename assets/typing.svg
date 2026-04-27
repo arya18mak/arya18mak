@@ -11,76 +11,104 @@
         font-size: 15px;
         fill: #58a6ff;
       }
-      .cursor {
-        fill: #58a6ff;
-        animation: blink 0.75s step-end infinite;
-      }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50%       { opacity: 0; }
-      }
 
-      /* Line 1: 0s–4s */
+      /* ── Clip rect animations (typewriter reveal) ── */
+
+      /* Line 1: 51 chars, 459px wide */
       #r1 {
         animation: a1 20s linear infinite;
       }
       @keyframes a1 {
-        0%    { width: 0px;   animation-timing-function: steps(52, end); }
-        7.5%  { width: 650px; }
-        19%   { width: 650px; animation-timing-function: step-end; }
+        0%    { width: 0px;   animation-timing-function: steps(51, end); }
+        7.5%  { width: 459px; }
+        19%   { width: 459px; animation-timing-function: step-end; }
         20%   { width: 0px; }
         100%  { width: 0px; }
       }
 
-      /* Line 2: 4s–8s */
+      /* Line 2: 50 chars, 450px wide */
       #r2 {
         animation: a2 20s linear infinite;
       }
       @keyframes a2 {
         0%    { width: 0px; }
         20%   { width: 0px;   animation-timing-function: steps(50, end); }
-        27.5% { width: 650px; }
-        39%   { width: 650px; animation-timing-function: step-end; }
+        27.5% { width: 450px; }
+        39%   { width: 450px; animation-timing-function: step-end; }
         40%   { width: 0px; }
         100%  { width: 0px; }
       }
 
-      /* Line 3: 8s–12s */
+      /* Line 3: 53 chars, 477px wide */
       #r3 {
         animation: a3 20s linear infinite;
       }
       @keyframes a3 {
         0%    { width: 0px; }
         40%   { width: 0px;   animation-timing-function: steps(53, end); }
-        47.5% { width: 650px; }
-        59%   { width: 650px; animation-timing-function: step-end; }
+        47.5% { width: 477px; }
+        59%   { width: 477px; animation-timing-function: step-end; }
         60%   { width: 0px; }
         100%  { width: 0px; }
       }
 
-      /* Line 4: 12s–16s */
+      /* Line 4: 53 chars, 477px wide */
       #r4 {
         animation: a4 20s linear infinite;
       }
       @keyframes a4 {
         0%    { width: 0px; }
-        60%   { width: 0px;   animation-timing-function: steps(54, end); }
-        67.5% { width: 650px; }
-        79%   { width: 650px; animation-timing-function: step-end; }
+        60%   { width: 0px;   animation-timing-function: steps(53, end); }
+        67.5% { width: 477px; }
+        79%   { width: 477px; animation-timing-function: step-end; }
         80%   { width: 0px; }
         100%  { width: 0px; }
       }
 
-      /* Line 5: 16s–20s */
+      /* Line 5: 51 chars, 459px wide */
       #r5 {
         animation: a5 20s linear infinite;
       }
       @keyframes a5 {
         0%    { width: 0px; }
         80%   { width: 0px;   animation-timing-function: steps(51, end); }
-        87.5% { width: 650px; }
-        99%   { width: 650px; animation-timing-function: step-end; }
+        87.5% { width: 459px; }
+        99%   { width: 459px; animation-timing-function: step-end; }
         100%  { width: 0px; }
+      }
+
+      /* ── Cursor: moves with the text + blinks ── */
+      .cursor {
+        animation: curpos 20s linear infinite, blink 0.75s step-end infinite;
+      }
+
+      @keyframes curpos {
+        /* Line 1 */
+        0%    { transform: translateX(0px);   animation-timing-function: steps(51, end); }
+        7.5%  { transform: translateX(459px); }
+        19%   { transform: translateX(459px); animation-timing-function: step-end; }
+        20%   { transform: translateX(0px);   animation-timing-function: steps(50, end); }
+        /* Line 2 */
+        27.5% { transform: translateX(450px); }
+        39%   { transform: translateX(450px); animation-timing-function: step-end; }
+        40%   { transform: translateX(0px);   animation-timing-function: steps(53, end); }
+        /* Line 3 */
+        47.5% { transform: translateX(477px); }
+        59%   { transform: translateX(477px); animation-timing-function: step-end; }
+        60%   { transform: translateX(0px);   animation-timing-function: steps(53, end); }
+        /* Line 4 */
+        67.5% { transform: translateX(477px); }
+        79%   { transform: translateX(477px); animation-timing-function: step-end; }
+        80%   { transform: translateX(0px);   animation-timing-function: steps(51, end); }
+        /* Line 5 */
+        87.5% { transform: translateX(459px); }
+        99%   { transform: translateX(459px); animation-timing-function: step-end; }
+        100%  { transform: translateX(0px); }
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
       }
     </style>
   </defs>
@@ -93,6 +121,6 @@
   <text clip-path="url(#c4)" x="25" y="27">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
   <text clip-path="url(#c5)" x="25" y="27">Deep Agents - LangGraph - Anthropic Claude - OpenAI</text>
 
-  <!-- Blinking cursor -->
-  <rect class="cursor" x="22" y="10" width="2" height="20" rx="1"/>
+  <!-- Cursor sits at x=25 and translateX moves it right with the text -->
+  <rect class="cursor" x="25" y="10" width="2" height="20" rx="1" fill="#58a6ff"/>
 </svg>
