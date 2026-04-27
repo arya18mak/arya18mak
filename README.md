@@ -2,15 +2,17 @@
 <img src="./assets/header.svg" width="100%"/>
 </div>
 
-<div align="center">
-
+<p align="center">
 <img src="./assets/typing.svg" width="700"/>
+</p>
+
+<p align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/arya-makwana)
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:arya18mak@gmail.com)
 ![Profile Views](https://komarev.com/ghpvc/?username=arya18mak&style=for-the-badge&color=1f6feb&label=PROFILE+VIEWS)
 
-</div>
+</p>
 
 ---
 
