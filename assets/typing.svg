@@ -6,26 +6,29 @@
         font-size: 15px;
         fill: #58a6ff;
         text-anchor: middle;
+        dominant-baseline: middle;
       }
-      .l1 { animation: fade 20s linear infinite 0s; }
-      .l2 { animation: fade 20s linear infinite -16s; }
-      .l3 { animation: fade 20s linear infinite -12s; }
-      .l4 { animation: fade 20s linear infinite -8s; }
-      .l5 { animation: fade 20s linear infinite -4s; }
+
+      /* 25s total cycle, each line visible for 5s */
+      .l1 { animation: fade 25s linear infinite 0s; }
+      .l2 { animation: fade 25s linear infinite -20s; }
+      .l3 { animation: fade 25s linear infinite -15s; }
+      .l4 { animation: fade 25s linear infinite -10s; }
+      .l5 { animation: fade 25s linear infinite -5s; }
 
       @keyframes fade {
         0%   { opacity: 0; }
-        5%   { opacity: 1; }
-        20%  { opacity: 1; }
-        25%  { opacity: 0; }
+        4%   { opacity: 1; }
+        16%  { opacity: 1; }
+        20%  { opacity: 0; }
         100% { opacity: 0; }
       }
     </style>
   </defs>
 
-  <text class="l1" x="350" y="27">Building agentic LLM systems for Fortune 30 clients</text>
-  <text class="l2" x="350" y="27">Designing hybrid RAG pipelines at enterprise scale</text>
-  <text class="l3" x="350" y="27">80% faster analysis — $1M in operational cost savings</text>
-  <text class="l4" x="350" y="27">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
-  <text class="l5" x="350" y="27">Deep Agents — LangGraph — Anthropic Claude — OpenAI</text>
+  <text class="l1" x="350" y="20">Building agentic LLM systems for Fortune 30 clients</text>
+  <text class="l2" x="350" y="20">Designing hybrid RAG pipelines at enterprise scale</text>
+  <text class="l3" x="350" y="20">80% faster analysis — $1M in operational cost savings</text>
+  <text class="l4" x="350" y="20">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
+  <text class="l5" x="350" y="20">Deep Agents — LangGraph — Anthropic Claude — OpenAI</text>
 </svg>
