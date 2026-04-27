@@ -1,0 +1,70 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#0d2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="wave1g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#388bfd;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0.7"/>
+    </linearGradient>
+    <linearGradient id="wave2g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#388bfd;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#1f6feb;stop-opacity:0.3"/>
+    </linearGradient>
+    <linearGradient id="topbar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f6feb"/>
+      <stop offset="50%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    <style>
+      .title { animation: fadeUp 1.2s ease forwards; opacity: 0; }
+      .subtitle { animation: fadeUp 1.2s ease 0.3s forwards; opacity: 0; }
+      .wave1 { animation: waveMove 6s ease-in-out infinite; }
+      .wave2 { animation: waveMove 8s ease-in-out infinite reverse; }
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes waveMove {
+        0%, 100% { transform: translateX(0); }
+        50%       { transform: translateX(-30px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="220" fill="url(#bg)" rx="12"/>
+
+  <!-- Top accent bar -->
+  <rect width="900" height="3" fill="url(#topbar)" rx="0"/>
+
+  <!-- Wave layer 1 -->
+  <g class="wave1">
+    <path d="M0,160 C150,130 300,180 450,155 C600,130 750,170 900,150 L900,220 L0,220 Z" fill="url(#wave1g)"/>
+  </g>
+
+  <!-- Wave layer 2 -->
+  <g class="wave2">
+    <path d="M0,175 C120,155 270,195 450,170 C630,145 780,185 900,165 L900,220 L0,220 Z" fill="url(#wave2g)"/>
+  </g>
+
+  <!-- Name -->
+  <text class="title" x="450" y="90" text-anchor="middle"
+    font-family="'Segoe UI', system-ui, sans-serif"
+    font-size="44" font-weight="700" fill="#e6edf3" letter-spacing="-0.5">
+    Arya Makwana
+  </text>
+
+  <!-- Subtitle -->
+  <text class="subtitle" x="450" y="128" text-anchor="middle"
+    font-family="'Segoe UI', system-ui, sans-serif"
+    font-size="16" font-weight="400" fill="#a5c8ff" letter-spacing="0.3">
+    AI Engineer · Agentic LLM Systems · RAG · SDLC Automation
+  </text>
+
+  <!-- Bottom wave footer shape -->
+  <path d="M0,210 C200,195 400,215 600,205 C750,198 850,210 900,208 L900,220 L0,220 Z" fill="#1f6feb" opacity="0.15"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="700" height="40" viewBox="0 0 700 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .line { font-family: 'Courier New', Courier, monospace; font-size: 16px; fill: #58a6ff; }
+      .cursor { fill: #58a6ff; animation: blink 0.8s step-end infinite; }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+      .t1 { animation: cycle 20s linear infinite 0s; }
+      .t2 { animation: cycle 20s linear infinite -16s; }
+      .t3 { animation: cycle 20s linear infinite -12s; }
+      .t4 { animation: cycle 20s linear infinite -8s; }
+      .t5 { animation: cycle 20s linear infinite -4s; }
+
+      @keyframes cycle {
+        0%   { opacity:0; transform:translateY(8px); }
+        3%   { opacity:1; transform:translateY(0); }
+        17%  { opacity:1; transform:translateY(0); }
+        20%  { opacity:0; transform:translateY(-8px); }
+        100% { opacity:0; }
+      }
+    </style>
+  </defs>
+
+  <rect width="700" height="40" fill="none"/>
+
+  <text class="line t1" x="350" y="26" text-anchor="middle">Building agentic LLM systems for Fortune 30 clients</text>
+  <text class="line t2" x="350" y="26" text-anchor="middle">Designing hybrid RAG pipelines at enterprise scale</text>
+  <text class="line t3" x="350" y="26" text-anchor="middle">80% faster analysis · $1M in operational cost savings</text>
+  <text class="line t4" x="350" y="26" text-anchor="middle">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
+  <text class="line t5" x="350" y="26" text-anchor="middle">Deep Agents · LangGraph · Anthropic Claude · OpenAI</text>
+
+  <rect class="cursor" x="352" y="12" width="2" height="18" rx="1"/>
+</svg>
