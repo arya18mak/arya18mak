@@ -1,33 +1,64 @@
 <svg width="700" height="40" viewBox="0 0 700 40" xmlns="http://www.w3.org/2000/svg">
   <defs>
+    <!-- Clip paths for typewriter reveal per line -->
+    <clipPath id="c1"><rect x="0" y="0" height="40">
+      <animate attributeName="width" dur="20s" repeatCount="indefinite"
+        values="0;650;650;0;0"
+        keyTimes="0;0.075;0.19;0.2;1"
+        calcMode="linear"/>
+    </rect></clipPath>
+
+    <clipPath id="c2"><rect x="0" y="0" height="40">
+      <animate attributeName="width" dur="20s" repeatCount="indefinite"
+        values="0;0;650;650;0;0"
+        keyTimes="0;0.2;0.275;0.39;0.4;1"
+        calcMode="linear"/>
+    </rect></clipPath>
+
+    <clipPath id="c3"><rect x="0" y="0" height="40">
+      <animate attributeName="width" dur="20s" repeatCount="indefinite"
+        values="0;0;650;650;0;0"
+        keyTimes="0;0.4;0.475;0.59;0.6;1"
+        calcMode="linear"/>
+    </rect></clipPath>
+
+    <clipPath id="c4"><rect x="0" y="0" height="40">
+      <animate attributeName="width" dur="20s" repeatCount="indefinite"
+        values="0;0;650;650;0;0"
+        keyTimes="0;0.6;0.675;0.79;0.8;1"
+        calcMode="linear"/>
+    </rect></clipPath>
+
+    <clipPath id="c5"><rect x="0" y="0" height="40">
+      <animate attributeName="width" dur="20s" repeatCount="indefinite"
+        values="0;0;650;650;0;0"
+        keyTimes="0;0.8;0.875;0.99;1;1"
+        calcMode="linear"/>
+    </rect></clipPath>
+
     <style>
-      .line { font-family: 'Courier New', Courier, monospace; font-size: 16px; fill: #58a6ff; }
-      .cursor { fill: #58a6ff; animation: blink 0.8s step-end infinite; }
-      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-      .t1 { animation: cycle 20s linear infinite 0s; }
-      .t2 { animation: cycle 20s linear infinite -16s; }
-      .t3 { animation: cycle 20s linear infinite -12s; }
-      .t4 { animation: cycle 20s linear infinite -8s; }
-      .t5 { animation: cycle 20s linear infinite -4s; }
-
-      @keyframes cycle {
-        0%   { opacity:0; transform:translateY(8px); }
-        3%   { opacity:1; transform:translateY(0); }
-        17%  { opacity:1; transform:translateY(0); }
-        20%  { opacity:0; transform:translateY(-8px); }
-        100% { opacity:0; }
+      text {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        fill: #58a6ff;
       }
+      .cursor {
+        fill: #58a6ff;
+        animation: blink 0.75s step-end infinite;
+      }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     </style>
   </defs>
 
   <rect width="700" height="40" fill="none"/>
 
-  <text class="line t1" x="350" y="26" text-anchor="middle">Building agentic LLM systems for Fortune 30 clients</text>
-  <text class="line t2" x="350" y="26" text-anchor="middle">Designing hybrid RAG pipelines at enterprise scale</text>
-  <text class="line t3" x="350" y="26" text-anchor="middle">80% faster analysis · $1M in operational cost savings</text>
-  <text class="line t4" x="350" y="26" text-anchor="middle">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
-  <text class="line t5" x="350" y="26" text-anchor="middle">Deep Agents · LangGraph · Anthropic Claude · OpenAI</text>
+  <!-- Typewriter text lines -->
+  <text clip-path="url(#c1)" x="25" y="27">Building agentic LLM systems for Fortune 30 clients</text>
+  <text clip-path="url(#c2)" x="25" y="27">Designing hybrid RAG pipelines at enterprise scale</text>
+  <text clip-path="url(#c3)" x="25" y="27">80% faster analysis · $1M in operational cost savings</text>
+  <text clip-path="url(#c4)" x="25" y="27">Fine-tuning Llama 3.1, Phi-3, Gemma with LoRA / QLoRA</text>
+  <text clip-path="url(#c5)" x="25" y="27">Deep Agents · LangGraph · Anthropic Claude · OpenAI</text>
 
-  <rect class="cursor" x="352" y="12" width="2" height="18" rx="1"/>
+  <!-- Blinking cursor -->
+  <rect class="cursor" x="22" y="10" width="2" height="20" rx="1"/>
 </svg>
