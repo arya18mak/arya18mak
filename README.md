@@ -70,26 +70,6 @@ I'm an AI Engineer building **production-grade agentic LLM and RAG systems** —
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="./assets/stats.svg" height="165"/>
-&nbsp;
-<img src="./assets/langs.svg" height="165"/>
-
-<br/><br/>
-
-<img src="./assets/streak.svg"/>
-
-<br/><br/>
-
-<img src="./assets/trophies.svg"/>
-
-</div>
-
----
-
 ## 🔭 What I'm Thinking About
 
 - 🔬 How to make **agentic systems** reliable and auditable in high-stakes enterprise settings
